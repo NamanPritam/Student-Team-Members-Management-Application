@@ -1,0 +1,157 @@
+.view-members-page {
+  padding-top: 2.5rem;
+  padding-bottom: 4rem;
+}
+
+.view-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.view-header .page-header {
+  margin-bottom: 0;
+  text-align: left;
+}
+
+.view-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.search-input {
+  width: 260px;
+  border-radius: 999px;
+  padding: 0.55rem 1.1rem;
+}
+
+/* ── Member Card ── */
+.member-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.25s ease;
+}
+
+.member-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(108, 99, 255, 0.15);
+}
+
+.member-card-img-wrap {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: var(--bg-hover);
+}
+
+.member-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.member-card:hover .member-card-img {
+  transform: scale(1.05);
+}
+
+.member-card-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--accent-glow), rgba(255,209,102,0.1));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Outfit', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--accent-light);
+}
+
+.member-card-body {
+  padding: 1rem 1.1rem 0.5rem;
+  flex: 1;
+}
+
+.member-name {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.member-roll {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.member-role {
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.member-degree {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-top: 0.3rem;
+}
+
+.member-card-actions {
+  padding: 0.75rem 1rem 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.view-details-btn {
+  flex: 1;
+  justify-content: center;
+}
+
+/* ── Empty State ── */
+.empty-state {
+  text-align: center;
+  padding: 5rem 2rem;
+}
+
+.empty-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.empty-state h3 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.4rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.empty-state p {
+  color: var(--text-secondary);
+}
+
+@media (max-width: 600px) {
+  .view-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .view-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .search-input {
+    width: 100%;
+  }
+}
